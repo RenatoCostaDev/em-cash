@@ -1,0 +1,77 @@
+@import "./variables.scss";
+* {
+  @include margin-padding(0, 0);
+  font-family: $fontFamily;
+}
+.underline {
+  width: 15rem;
+  height: 0.25rem;
+  background: $clr-gold;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-app {
+  @include centerItens(center);
+  @include margin-padding(15px, 15px);
+  flex-direction: column;
+  & h2 {
+    @include margin-padding(15px, 5px);
+    font-size: 30px;
+  }
+  & p {
+    @include margin-padding(15px, 5px);
+    font-size: 12px;
+  }
+  & .total-title {
+    font-size: 25px;
+  }
+}
+.figures {
+  @include centerItens(center);
+  @include margin-padding(25px, 25px);
+  & div {
+    @include margin-padding(15px, 15px);
+  }
+}
+footer {
+  @include margin-padding(55px, 25px);
+  @include centerItens(center);
+}
+.footer-btns {
+  @include centerItens(center);
+  flex-direction: column;
+  & .btn-link-home {
+    @include margin-padding(60px, 5px);
+  }
+}
+.btn {
+  border: none;
+  padding: 30px;
+  background-color: $clr-gold;
+  outline-color: $outside-btn;
+  text-decoration: none;
+  transition: background 0.3s;
+  border-radius: 10px;
+}
+.btn:hover {
+  background-color: $clr-gold-hover;
+}
+.btn:active {
+  background-color: $outside-btn;
+  color: $onClick;
+}
+
+.total-area {
+  @include centerItens(center);
+  font-size: 40px;
+  flex-direction: column;
+  & .btn-link-home {
+    @include margin-padding(60px, 5px);
+  }
+}
+
+.form {
+  @include centerItens(center);
+  @include margin-padding(60px, 5px);
+  flex-direction: column;
+}

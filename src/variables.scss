@@ -1,0 +1,29 @@
+/*
+=============== 
+Variables
+===============
+*/
+$clr-gold: #c59d5f;
+$clr-gold-hover: #c4ae8c;
+$outside-btn: #cf1919;
+$fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+$onClick: #ebf5fc;
+$background-color: #2aa9b9;
+$color-text: #32a3b1;
+$shadow-color: rgba(255, 255, 255, 1);
+
+@mixin margin-padding($marg, $padd) {
+  margin: $marg;
+  padding: $padd;
+}
+@mixin centerItens($position) {
+  align-items: center;
+  display: flex;
+  justify-content: $position;
+}
+@mixin radius-shadow {
+  border-radius: 40px;
+  box-shadow: -6px -6px 20px $shadow-color, 6px 6px 20px $inset-color-int;
+}
