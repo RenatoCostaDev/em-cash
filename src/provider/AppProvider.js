@@ -16,7 +16,7 @@ const AppProvider = ({ children }) => {
   const [areaTriangulo, setAreaTriangulo] = useState(0)
 
   const loadData = () => {
-    Axios.get('api/areatotal')
+    Axios.get('http://18.118.129.38/api/areatotal')
      .then((response)=> {
       setTotal(response.data.areatotal.toFixed(2))})
   }
@@ -33,7 +33,7 @@ const AppProvider = ({ children }) => {
       return alert('Apenas números acima de zero')
     } else {
     const data = {base, altura}
-    Axios.post('api/retangulos', data)
+    Axios.post('http://18.118.129.38/api/retangulos', data)
           .then(loadData)
     let result = getAreaRectangle(baseRetangulo, alturaRetangulo)
     setAreaRetangulo(result)
@@ -51,7 +51,7 @@ const AppProvider = ({ children }) => {
       return alert('Apenas números acima de zero')
     } else {
     const data = {a, b, c}
-    Axios.post('api/triangulos', data)
+    Axios.post('http://18.118.129.38/api/triangulos', data)
          .then(loadData)
     let result = getTriangleArea(a, b, c)
       setAreaTriangulo(result)
